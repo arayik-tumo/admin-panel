@@ -6,7 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
 
-Route::get('/gago', function () {
-    return 'Bari galust Gago jan';
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
